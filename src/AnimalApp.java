@@ -2,8 +2,6 @@ import animals.Animal;
 import animals.Color;
 import factory.AnimalFactory;
 import factory.AnimalType;
-
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
