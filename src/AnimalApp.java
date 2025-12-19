@@ -33,7 +33,7 @@ public class AnimalApp {
                     try {
                         animalType = AnimalType.valueOf(animalTypeInput);
                     } catch (IllegalArgumentException e) {
-                        System.out.println("Неверный тип животного. Попробуйте снова.");
+                        System.out.print("Неверный тип животного. Попробуйте снова. ");
                     }
                 }
 
