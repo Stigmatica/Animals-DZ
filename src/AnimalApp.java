@@ -50,10 +50,10 @@ public class AnimalApp {
                         if (age >= 0) {
                             break;
                         } else {
-                            System.out.println("Возраст не может быть меньше 0. Повторите ввод");
+                            System.out.print("Возраст не может быть меньше 0. Повторите ввод ");
                         }
                     } catch (NumberFormatException e) {
-                        System.out.println("Возраст должен быть в числовом формате.");
+                        System.out.print("Возраст должен быть в числовом формате. ");
                     }
                 }
 
@@ -67,10 +67,10 @@ public class AnimalApp {
                         if (weight >= 0) {
                             break;
                         } else {
-                            System.out.println("Вес не может быть меньше 0. Повторите ввод");
+                            System.out.print("Вес не может быть меньше 0. Повторите ввод. ");
                         }
                     } catch (NumberFormatException e) {
-                        System.out.println("Вес должен быть в числовом формате.");
+                        System.out.print("Вес должен быть в числовом формате. ");
                     }
                 }
 
@@ -102,7 +102,7 @@ public class AnimalApp {
         String commandInput = null;
         while (Command.doesNotContain(commandInput)) {
             if (commandInput != null) {
-                System.out.println("Введена неверная команда");
+                System.out.print("Введена неверная команда. ");
             }
             System.out.printf("Введите одну из команд (%s): ", String.join("/", Command.NAMES));
             commandInput = scanner.next();

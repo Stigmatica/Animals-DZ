@@ -3,7 +3,7 @@ package animals;
 public class Animal {
     private String name;
     private int age;
-    private int wight;
+    private int weight;
     private Color color = Color.UNDEFINED;
 
     public String getName() {
@@ -20,11 +20,11 @@ public class Animal {
         this.age = age;
     }
 
-    public int getWight() {
-        return wight;}
+    public int getWeight() {
+        return weight;}
 
     public void setWight(int wight) {
-        this.wight = wight;
+        this.weight = weight;
     }
 
     public Color getColor() {
@@ -49,7 +49,7 @@ public class Animal {
 
     @Override
     public String toString() {
-        return String.format("Привет! Меня зовут %s, мне %d %s, я вешу %d кг, мой цвет - %s", name, age, getAgeSuffix(), wight, color.getValue());
+        return String.format("Привет! Меня зовут %s, мне %d %s, я вешу %d кг, мой цвет - %s", name, age, getAgeSuffix(), weight, color.getValue());
     }
 
     private String getAgeSuffix() {
