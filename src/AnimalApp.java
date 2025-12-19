@@ -87,7 +87,7 @@ public class AnimalApp {
 
                 animal.setName(name);
                 animal.setAge(age);
-                animal.setWight(weight);
+                animal.setWeight(weight);
                 animal.setColor(color);
 
                 animals.add(animal);

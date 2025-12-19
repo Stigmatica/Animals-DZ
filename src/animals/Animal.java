@@ -23,7 +23,7 @@ public class Animal {
     public int getWeight() {
         return weight;}
 
-    public void setWight(int wight) {
+    public void setWeight(int wight) {
         this.weight = weight;
     }
 
