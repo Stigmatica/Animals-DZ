@@ -2,6 +2,8 @@ import animals.Animal;
 import animals.Color;
 import factory.AnimalFactory;
 import factory.AnimalType;
+import tools.NameValidator;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -38,13 +40,28 @@ public class AnimalApp {
                 }
 
                 // Имя
-                System.out.print("Введите имя: ");
-                String name = scanner.next().trim();
+                boolean isNameValid;
+                String name;
+                do {
+                    System.out.print("Введите имя: ");
+                    name = scanner.next().trim();
+
+                    isNameValid = NameValidator.nameValidator(name);
+
+                    if (isNameValid == false) {
+                        System.out.println("""
+                    Некорректное имя. Имя должно:
+                    - содержать только буквы и дефисы
+                    - начинаться с заглавной буквы
+                    - быть длиной от 2 до 50 символов
+                    """);
+                    }
+                } while (isNameValid == false);
 
                 int age = 0;
                 while (true) {
                     try {
-                        System.out.print("Введите возраст: ");
+                        System.out.print("Введите возраст (полных лет): ");
                         age = Integer.parseInt(scanner.next());
 
                         if (age >= 0) {
@@ -61,13 +78,13 @@ public class AnimalApp {
                 int weight = 0;
                 while (true) {
                     try {
-                        System.out.print("Введите вес: ");
+                        System.out.print("Введите вес (в кг): ");
                         weight = Integer.parseInt(scanner.next());
 
-                        if (weight >= 0) {
+                        if (weight >= 0 && weight <= 99) {
                             break;
                         } else {
-                            System.out.print("Вес не может быть меньше 0. Повторите ввод. ");
+                            System.out.print("Вес не может быть меньше 0 и больше 99. Повторите ввод. ");
                         }
                     } catch (NumberFormatException e) {
                         System.out.print("Вес должен быть в числовом формате. ");
